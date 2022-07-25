@@ -6,9 +6,9 @@ import { store } from './store'
 </script>
 
 <template>
-  <h1 v-if="store.kana_visible">Kana Kuizu</h1>
+  <h1>Kana Kuizu</h1>
 
-  <div class="card">
+  <div v-show="store.kana_visible">
     <button type="button" @click="store.kana_visible = !store.kana_visible">start quiz</button>
   </div>
 </template>
