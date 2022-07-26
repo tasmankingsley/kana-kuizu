@@ -98,8 +98,7 @@ function check_input(input, romaji, i) {
     flex-direction: column;
     place-content: center;
     place-items: center;
-    gap: 5px;
-    width: 180px;
+    width: 160px;
     height: 180px;
     font-size: 4rem;
     margin: 5px;
@@ -108,8 +107,8 @@ function check_input(input, romaji, i) {
 }
 
 input {
-    font-size: 2.2rem;
-    width: 140px;
+    font-size: 2rem;
+    width: 100px;
     text-align: center;
     border-radius: 5px;
     border-style: none;
