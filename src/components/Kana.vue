@@ -37,7 +37,43 @@ let kana_list = reactive([
     {kana: 'ミ', romaji: 'mi', input: '', color: '#000', disabled: false},
     {kana: 'ム', romaji: 'mu', input: '', color: '#000', disabled: false},
     {kana: 'メ', romaji: 'me', input: '', color: '#000', disabled: false},
-    {kana: 'モ', romaji: 'mo', input: '', color: '#000', disabled: false}
+    {kana: 'モ', romaji: 'mo', input: '', color: '#000', disabled: false},
+    {kana: 'ヤ', romaji: 'ya', input: '', color: '#000', disabled: false},
+    {kana: 'ユ', romaji: 'yu', input: '', color: '#000', disabled: false},
+    {kana: 'ヨ', romaji: 'yo', input: '', color: '#000', disabled: false},
+    {kana: 'ラ', romaji: 'ra', input: '', color: '#000', disabled: false},
+    {kana: 'リ', romaji: 'ri', input: '', color: '#000', disabled: false},
+    {kana: 'ル', romaji: 'ru', input: '', color: '#000', disabled: false},
+    {kana: 'レ', romaji: 're', input: '', color: '#000', disabled: false},
+    {kana: 'ロ', romaji: 'ro', input: '', color: '#000', disabled: false},
+    {kana: 'ワ', romaji: 'wa', input: '', color: '#000', disabled: false},
+    {kana: 'ヲ', romaji: 'wo', input: '', color: '#000', disabled: false},
+    {kana: 'ン', romaji: 'n', input: '', color: '#000', disabled: false},
+    {kana: 'ガ', romaji: 'ga', input: '', color: '#000', disabled: false},
+    {kana: 'ギ', romaji: 'gi', input: '', color: '#000', disabled: false},
+    {kana: 'グ', romaji: 'gu', input: '', color: '#000', disabled: false},
+    {kana: 'ゲ', romaji: 'ge', input: '', color: '#000', disabled: false},
+    {kana: 'ゴ', romaji: 'go', input: '', color: '#000', disabled: false},
+    {kana: 'ザ', romaji: 'za', input: '', color: '#000', disabled: false},
+    {kana: 'ジ', romaji: 'ji', input: '', color: '#000', disabled: false},
+    {kana: 'ズ', romaji: 'zu', input: '', color: '#000', disabled: false},
+    {kana: 'ゼ', romaji: 'ze', input: '', color: '#000', disabled: false},
+    {kana: 'ゾ', romaji: 'zo', input: '', color: '#000', disabled: false},
+    {kana: 'ダ', romaji: 'da', input: '', color: '#000', disabled: false},
+    {kana: 'ヂ', romaji: 'di', input: '', color: '#000', disabled: false},
+    {kana: 'ヅ', romaji: 'du', input: '', color: '#000', disabled: false},
+    {kana: 'デ', romaji: 'de', input: '', color: '#000', disabled: false},
+    {kana: 'ド', romaji: 'do', input: '', color: '#000', disabled: false},
+    {kana: 'バ', romaji: 'ba', input: '', color: '#000', disabled: false},
+    {kana: 'ビ', romaji: 'bi', input: '', color: '#000', disabled: false},
+    {kana: 'ブ', romaji: 'bu', input: '', color: '#000', disabled: false},
+    {kana: 'ベ', romaji: 'be', input: '', color: '#000', disabled: false},
+    {kana: 'ボ', romaji: 'bo', input: '', color: '#000', disabled: false},
+    {kana: 'パ', romaji: 'pa', input: '', color: '#000', disabled: false},
+    {kana: 'ピ', romaji: 'pi', input: '', color: '#000', disabled: false},
+    {kana: 'プ', romaji: 'pu', input: '', color: '#000', disabled: false},
+    {kana: 'ペ', romaji: 'pe', input: '', color: '#000', disabled: false},
+    {kana: 'ポ', romaji: 'po', input: '', color: '#000', disabled: false},
 ]);
 
 function shuffle(array) {
@@ -76,7 +112,7 @@ function check_input(input, romaji, i) {
         <div class="kana" :style="{'background-color': kana_list[i].color}" >
             <span>{{item.kana}}</span>
             <input v-model="kana_list[i].input" :key="i" @keydown.enter="check_input(kana_list[i].input, item.romaji, i)" 
-            :disabled="kana_list[i].disabled" ref="item_refs" />
+            :disabled="kana_list[i].disabled" ref="item_refs" autocapitalize="off"/>
         </div>
     </div>
 </div>
