@@ -59,7 +59,6 @@ function check_input(input, romaji, i) {
     focus_next(i);
 }
 
-
 </script>
 
 <template>
