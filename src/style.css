@@ -1,7 +1,7 @@
 :root {
   font-family: Helvetica;
   font-size: 16px;
-  background-color: #344d4c;
+  background-color: #cfe6f4;
   color: #fff;
   background-image: url('/sakura.jpeg');
   background-repeat: no-repeat;
@@ -36,3 +36,4 @@ button:focus-visible {
   padding: 0px;
   text-align: center;
 }
+
