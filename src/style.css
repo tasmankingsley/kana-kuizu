@@ -8,6 +8,7 @@
   background-size: cover;
 }
 
+
 body {
   margin: 0;
 }
@@ -37,3 +38,10 @@ button:focus-visible {
   text-align: center;
 }
 
+@media (max-width: 600px) {
+  :root {
+    background-image: none;
+  }
+}
+
+/* Sakura photo by Masaaki Komori on Unsplash */
