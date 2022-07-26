@@ -40,6 +40,15 @@ let kana_list = reactive([
     {kana: 'モ', romaji: 'mo', input: '', color: '#000', disabled: false}
 ]);
 
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+shuffle(kana_list);
+
 const item_refs = ref([]);
 
 function focus_next(i) {
@@ -99,8 +108,8 @@ function check_input(input, romaji, i) {
 }
 
 input {
-    font-size: 2.5rem;
-    width: 80%;
+    font-size: 2.2rem;
+    width: 140px;
     text-align: center;
     border-radius: 5px;
     border-style: none;
