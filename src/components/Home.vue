@@ -14,5 +14,10 @@ import { store } from './store'
 </template>
 
 <style scoped>
+h1 {
+  color: #2b2d42;
+  font-weight: 200;
+  font-size: 2.5rem;
+}
 
 </style>

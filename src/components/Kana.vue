@@ -123,12 +123,11 @@ function check_input(input, romaji, i) {
 .flex {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin: 20px;
 }
-.grid {
 
-}
 .kana {
     display: flex;
     flex-direction: column;
@@ -137,9 +136,8 @@ function check_input(input, romaji, i) {
     width: 160px;
     height: 180px;
     font-size: 4rem;
-    margin: 5px;
-    /* background-color: #2b2d42; */
     border-radius: 10px;
+    opacity: 0.9;
 }
 
 input {
