@@ -1,8 +1,8 @@
 <script setup>
-import { store, katakana } from './store'
+import { store, katakana, hiragana } from './store'
 import { reactive, ref, onMounted} from 'vue';
 
-let kana_list = reactive([...katakana]);
+let kana_list = reactive([...hiragana, ...katakana]);
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
