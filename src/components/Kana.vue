@@ -1,8 +1,19 @@
 <script setup>
-import { store, katakana, hiragana } from './store'
-import { reactive, ref, onMounted} from 'vue';
+import { store, options, hiragana, katakana } from './store'
+import { reactive, ref} from 'vue';
 
-let kana_list = reactive([...hiragana, ...katakana]);
+let kana_list = reactive([]);
+const item_refs = ref([]);
+
+function populate_list() {
+    if (options[0].selected === true) {
+        kana_list = [...hiragana];
+    } else if (options[1].selected === true) {
+        kana_list = [...katakana];
+    } else if (options[2].selected === true) {
+        kana_list = [...hiragana, ...katakana];
+    }
+}
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -10,10 +21,6 @@ function shuffle(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
-
-shuffle(kana_list);
-
-const item_refs = ref([]);
 
 function focus_next(i) {
     if (item_refs.value[i + 1] !== undefined) {
@@ -32,9 +39,25 @@ function check_input(input, romaji, i) {
     focus_next(i);
 }
 
+function done() {
+    store.kana_visible = !store.kana_visible;
+
+    // reset array
+    kana_list.forEach(element => {
+        element.input = '';
+        element.color = '#000';
+        element.disabled = false;
+    });
+    shuffle(kana_list);
+}
+
+populate_list();
+shuffle(kana_list);
+
 </script>
 
 <template>
+<button class="back" @click="done">＜</button>
 <div class="flex">
     <div class="grid" v-for="(item, i) in kana_list" :key="i" >
         <div class="kana" :style="{'background-color': kana_list[i].color}" >
@@ -44,7 +67,7 @@ function check_input(input, romaji, i) {
         </div>
     </div>
 </div>
-<button @click="store.kana_visible = !store.kana_visible">done</button>
+<button @click="done">done</button>
 </template>
 
 <style scoped>
@@ -78,5 +101,13 @@ input {
 
 button {
     margin: 20px;
+}
+
+.back {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding: 5px 10px;
+
 }
 </style>

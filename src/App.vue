@@ -7,7 +7,7 @@ import { store } from './components/store'
 
 <template>
   <Home/>
-  <div v-show="!store.kana_visible">
+  <div v-if="store.kana_visible">
     <Kana/>
   </div>
   
