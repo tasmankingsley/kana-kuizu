@@ -1,7 +1,16 @@
-# Vue 3 + Vite
+# Kana Kuizu
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Description
 
-## Recommended IDE Setup
+A simple quiz app for learning the Japanese kana syllabaries: hiragana and katakana.
+The app features an option menu on the home page where you can choose whether to
+study hiragana, katakana, or both at the same time.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+The quiz presents a randomized grid of the kana and invites the user to remember the kana and input the corresponding romaji. The app will renforce learning and memory by validating the input and giving color feedback to the user for correct/incorrect answers.
+
+## Technology stack
+
+This app is build with the vue framework, javascript, css, and html.
+
+
+
