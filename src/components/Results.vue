@@ -8,7 +8,7 @@ let emote = '';
 if (kana_correct === kana_count) {
     emote = 'Perfect!';
 } else if (kana_correct > kana_count/2) {
-        emote = 'Well done, you got most correct. Keep going!';
+        emote = 'Well done, you answered most correctly. Keep going!';
 } else { 
     emote = 'Keep practicing, you\'ve got this!';
 }
