@@ -26,6 +26,7 @@ function select_option(i) {
 }
 
 function start_quiz() {
+  store.home_visible = !store.home_visible;
   store.kana_visible = !store.kana_visible
 }
 
@@ -34,13 +35,13 @@ function start_quiz() {
 <template>
   <h1>Kana Kuizu</h1>
   <!-- <h2>options</h2> -->
-  <div class="options-div" v-show="!store.kana_visible" v-for="(item, i) in options" :key="i">
+  <div class="options-div" v-show="store.home_visible" v-for="(item, i) in options" :key="i">
     <div class="option" @click="select_option(i)" :style="{'background-color': options[i].color}" :key="i">
       <span>{{item.option}}</span>
       <span>{{item.kana}}</span>
     </div>
   </div>
-  <div v-show="!store.kana_visible">
+  <div v-show="store.home_visible">
     <button type="button" @click="start_quiz">start quiz</button>
   </div>
 </template>

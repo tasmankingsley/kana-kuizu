@@ -1,9 +1,14 @@
 import { reactive } from 'vue';
 
 export let store = reactive({
+  home_visible: true,
   kana_visible: false,
+  results_visible: false,
   hiragana_enabled: false,
   katakana_enabled: false,
+  kana_count: 0,
+  correct_count: 0,
+  mistake_count: 0
 });
 
 export let options = reactive([

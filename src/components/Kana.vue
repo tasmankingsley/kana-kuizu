@@ -1,6 +1,6 @@
 <script setup>
 import { store, options, hiragana, katakana } from './store'
-import { reactive, ref} from 'vue';
+import { reactive, ref } from 'vue';
 
 let kana_list = reactive([]);
 const item_refs = ref([]);
@@ -32,15 +32,19 @@ function check_input(input, romaji, i) {
     if (input === romaji) {
         kana_list[i].color = '#34d399';
         kana_list[i].disabled = true;
+        store.correct_count++;
     } else {
         kana_list[i].color = '#2b2d42'
+        store.mistake_count++;
     }
     
     focus_next(i);
 }
 
+
 function done() {
     store.kana_visible = !store.kana_visible;
+    store.results_visible = !store.results_visible;
 
     // reset array
     kana_list.forEach(element => {
@@ -49,6 +53,9 @@ function done() {
         element.disabled = false;
     });
     shuffle(kana_list);
+
+    store.kana_count = kana_list.length;
+    
 }
 
 populate_list();
