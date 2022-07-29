@@ -27,7 +27,7 @@ function home() {
 
 <template>
     <div>
-        <h1>Result: {{kana_correct}}/{{kana_count}}.</h1>
+        <h1>Result: {{kana_correct}}/{{kana_count}}</h1>
         <p>{{emote}}</p>
     </div>
 
