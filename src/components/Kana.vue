@@ -41,21 +41,34 @@ function check_input(input, romaji, i) {
     focus_next(i);
 }
 
-
-function done() {
-    store.kana_visible = !store.kana_visible;
-    store.results_visible = !store.results_visible;
-
-    // reset array
+function reset_array() {
     kana_list.forEach(element => {
         element.input = '';
         element.color = '#000';
         element.disabled = false;
     });
+}
+
+function done() {
+    store.kana_visible = !store.kana_visible;
+    store.results_visible = !store.results_visible;
+
+    reset_array();
     shuffle(kana_list);
 
     store.kana_count = kana_list.length;
-    
+}
+
+function back() {
+    store.kana_visible = !store.kana_visible;
+    store.home_visible = !store.home_visible;
+
+    reset_array();
+    shuffle(kana_list);
+
+    store.kana_count = 0;
+    store.correct_count = 0;
+    store.mistake_count = 0;
 }
 
 populate_list();
@@ -64,7 +77,7 @@ shuffle(kana_list);
 </script>
 
 <template>
-<button class="back" @click="done">＜</button>
+<button class="back" @click="back">＜</button>
 <div class="flex">
     <div class="grid" v-for="(item, i) in kana_list" :key="i" >
         <div class="kana" :style="{'background-color': kana_list[i].color}" >

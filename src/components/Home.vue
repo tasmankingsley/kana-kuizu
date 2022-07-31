@@ -1,12 +1,5 @@
 <script setup>
-import { reactive } from 'vue';
 import { store, options } from './store'
-
-// let options = reactive([
-//   {option: 'hiragana', kana: 'あいうえお', color: '#2b2d42', selected: false},
-//   {option: 'katakana', kana: 'アイウエオ', color: '#2b2d42', selected: false},
-//   {option: 'hiragana + katakana', kana: 'ひらがな  カタカナ', color: '#2b2d42', selected: false}
-// ])
 
 function select_option(i) {
   options.forEach(item => {
@@ -34,7 +27,6 @@ function start_quiz() {
 
 <template>
   <h1>Kana Kuizu</h1>
-  <!-- <h2>options</h2> -->
   <div class="options-div" v-show="store.home_visible" v-for="(item, i) in options" :key="i">
     <div class="option" @click="select_option(i)" :style="{'background-color': options[i].color}" :key="i">
       <span>{{item.option}}</span>
@@ -78,7 +70,6 @@ h2 {
   height: 150px;
   border-radius: 10px;
 }
-
 .option:hover {
   opacity: 0.9;
 }
