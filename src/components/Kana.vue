@@ -104,7 +104,7 @@ shuffle(kana_list);
     flex-direction: column;
     place-content: center;
     place-items: center;
-    width: 160px;
+    width: 150px;
     height: 180px;
     font-size: 4rem;
     border-radius: 10px;
