@@ -96,7 +96,7 @@ shuffle(kana_list);
     flex-flow: row wrap;
     justify-content: space-evenly;
     gap: 20px;
-    margin: 20px;
+    margin: 15px;
 }
 
 .kana {
@@ -104,7 +104,7 @@ shuffle(kana_list);
     flex-direction: column;
     place-content: center;
     place-items: center;
-    width: 150px;
+    width: 155px;
     height: 180px;
     font-size: 4rem;
     border-radius: 10px;
