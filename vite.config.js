@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/kana-kuizu/',
+  // base: '/kana-kuizu/',
   plugins: [vue()],
   build: {
     outDir: 'docs',
