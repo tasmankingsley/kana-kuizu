@@ -1,5 +1,7 @@
 # Kana Kuizu
 
+https://kana-kuizu.web.app/
+
 ## Description
 
 A simple quiz app for learning the Japanese kana syllabaries: hiragana and katakana.
