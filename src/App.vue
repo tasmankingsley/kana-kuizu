@@ -7,10 +7,14 @@ import { store } from './components/store'
 </script>
 
 <template>
-  <Home/>
+  <div v-if="store.home_visible">
+    <Home/>
+  </div>
+
   <div v-if="store.kana_visible">
     <Kana/>
   </div>
+
   <div v-if="store.results_visible">
     <Results/>
   </div>

@@ -34,7 +34,7 @@ function check_input(input, romaji, i) {
         kana_list[i].disabled = true;
         store.correct_count++;
     } else {
-        kana_list[i].color = '#2b2d42'
+        kana_list[i].color = '#8d99ae'
         store.mistake_count++;
     }
     
@@ -119,12 +119,16 @@ input {
     border-style: none;
 }
 
+input:focus {
+    outline-color: #a9c6e2;
+}
+
 button {
     margin: 20px;
 }
 
 .back {
-    position: absolute;
+    display: block;
     left: 0px;
     top: 0px;
     padding: 5px 10px;

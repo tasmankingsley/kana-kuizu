@@ -1,5 +1,6 @@
 <script setup>
 import { store } from './store';
+import sakura from '../assets/sakura.jpeg';
 
 let kana_correct = store.correct_count;
 let kana_count  = store.kana_count;
@@ -26,29 +27,50 @@ function home() {
 
 
 <template>
+
+<div class="results" :style="{'background-image': `url(${sakura})`}">
+    <h1>Result: {{kana_correct}}/{{kana_count}}</h1>
+    <p>{{emote}}</p>
+    
     <div>
-        <h1>Result: {{kana_correct}}/{{kana_count}}</h1>
-        <p>{{emote}}</p>
+        <button @click="home">home</button>
     </div>
 
-<button @click="home">home</button>
+</div>
+
 </template>
 
 
 <style scoped>
-div {
-    margin-top: 100px;
-    margin-bottom: 100px;
+.results {
+    display: grid;
+    grid-template-rows: 200px 200px 200px;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
     color: #000;
 }
 
 h1 {
     font-size: 2rem;
-    font-weight: 400;  
+    font-weight: 400;
+    margin: 0px; 
 }
 
 p {
     font-size: 1.8rem;
     font-weight: 200;
+    /* max-width: 260px; */
+    margin: auto;
+    padding: 15px 10px;
+    border-radius: 10px;
+    background-color: rgba(234, 212, 221, 0.7);
+}
+
+@media (max-width: 500px) {
+    p {
+        max-width: 260px;
+    }
 }
 </style>

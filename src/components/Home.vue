@@ -1,5 +1,6 @@
 <script setup>
-import { store, options } from './store'
+import { store, options } from './store';
+import sakura from '../assets/sakura.jpeg';
 
 function select_option(i) {
   options.forEach(item => {
@@ -26,6 +27,8 @@ function start_quiz() {
 </script>
 
 <template>
+
+<div class="home" :style="{'background-image': `url(${sakura})`}">
   <h1>kana kuizu</h1>
   <div class="options-div" v-show="store.home_visible" v-for="(item, i) in options" :key="i">
     <div class="option" @click="select_option(i)" 
@@ -37,16 +40,26 @@ function start_quiz() {
   <div v-show="store.home_visible">
     <button type="button" @click="start_quiz">start quiz</button>
   </div>
+</div>
+
 </template>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Silkscreen&display=swap');
+
+.home {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
 
 h1 {
   font-family: 'Silkscreen', cursive;
   color: #000;
   font-weight: 200;
   font-size: 2.5rem;
+  margin: 0px;
+  padding: 20px;
 }
 h2 {
   color: #000;
