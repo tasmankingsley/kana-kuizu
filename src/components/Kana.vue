@@ -77,7 +77,7 @@ shuffle(kana_list);
 </script>
 
 <template>
-<button class="back" @click="back">＜</button>
+<button class="back" @click="back">↩︎</button>
 <div class="flex">
     <div class="grid" v-for="(item, i) in kana_list" :key="i" >
         <div class="kana" :style="{'background-color': kana_list[i].color}" >
@@ -128,6 +128,8 @@ button {
     left: 0px;
     top: 0px;
     padding: 5px 10px;
-
+    height: 40px;
+    line-height: 32px;
+    width: 60px;
 }
 </style>

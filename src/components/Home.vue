@@ -10,9 +10,9 @@ function select_option(i) {
 
   options.forEach(item => {
     if (item.selected === true) {
-      item.color = '#34d399';
+      item.color = '#ead4dd';
     } else {
-      item.color = '#2b2d42';
+      item.color = '#000';
     }
   });
   
@@ -26,9 +26,10 @@ function start_quiz() {
 </script>
 
 <template>
-  <h1>Kana Kuizu</h1>
+  <h1>kana kuizu</h1>
   <div class="options-div" v-show="store.home_visible" v-for="(item, i) in options" :key="i">
-    <div class="option" @click="select_option(i)" :style="{'background-color': options[i].color}" :key="i">
+    <div class="option" @click="select_option(i)" 
+    :style="{'background-color': options[i].color, 'color': options[i].selected ? '#000' : '#ead4dd'}" :key="i">
       <span>{{item.option}}</span>
       <span>{{item.kana}}</span>
     </div>
@@ -39,13 +40,16 @@ function start_quiz() {
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Silkscreen&display=swap');
+
 h1 {
-  color: #2b2d42;
+  font-family: 'Silkscreen', cursive;
+  color: #000;
   font-weight: 200;
   font-size: 2.5rem;
 }
 h2 {
-  color: #2b2d42;
+  color: #000;
   font-weight: 200;
   font-size: 2rem;
 }
@@ -64,7 +68,8 @@ h2 {
   flex-direction: column;
   place-items: center;
   justify-content: space-evenly;
-  background-color: #2b2d42;
+  background-color: #000;
+  /* border: 1px solid #000; */
   cursor: pointer;
   width: 320px;
   height: 150px;

@@ -39,7 +39,7 @@ function home() {
 div {
     margin-top: 100px;
     margin-bottom: 100px;
-    color: #2b2d42;
+    color: #000;
 }
 
 h1 {

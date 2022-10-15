@@ -3,7 +3,7 @@
   font-size: 16px;
   background-color: #cfe6f4;
   color: #fff;
-  background-image: url('/sakura.jpeg');
+  background-image: url('./images/sakura.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -24,7 +24,7 @@ button {
   background-color: #fffffc;
 }
 button:hover {
-  border-color: #ead4dd;
+  border-color: #000;
 }
 button:focus,
 button:focus-visible {
