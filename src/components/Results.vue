@@ -29,7 +29,7 @@ function home() {
 <template>
 
 <div class="results" :style="{'background-image': `url(${sakura})`}">
-    <h1>Result: {{kana_correct}}/{{kana_count}}</h1>
+    <h1>Result<br>{{kana_correct}}/{{kana_count}}</h1>
     <p>{{emote}}</p>
     
     <div>
@@ -42,6 +42,7 @@ function home() {
 
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Silkscreen&display=swap');
 .results {
     display: grid;
     grid-template-rows: 200px 200px 200px;
@@ -53,7 +54,8 @@ function home() {
 }
 
 h1 {
-    font-size: 2rem;
+    font-family: 'Silkscreen', cursive;
+    font-size: 2.5rem;
     font-weight: 400;
     margin: 0px; 
 }
