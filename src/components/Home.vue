@@ -34,6 +34,7 @@ function start_quiz() {
     <div class="option" @click="select_option(i)" 
     :style="{'background-color': options[i].color, 'color': options[i].selected ? '#000' : '#ead4dd'}" :key="i">
       <span>{{item.option}}</span>
+      <span>{{item.plus}}</span>
       <span>{{item.kana}}</span>
     </div>
   </div>
@@ -73,20 +74,22 @@ h2 {
   color: #fff;
   font-weight: 200;
   font-size: 1.8rem;
-  gap: 10px;
+  gap: 0px;
   margin: 20px;
 }
 .option {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  /* flex-direction: column; */
+  grid-template-rows: 1fr 0px 1fr;
+  
   place-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   background-color: #000;
   /* border: 1px solid #000; */
   cursor: pointer;
   width: 320px;
   height: 150px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 .option:hover {
   opacity: 0.9;

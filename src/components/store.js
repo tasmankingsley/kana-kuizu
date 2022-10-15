@@ -12,9 +12,9 @@ export let store = reactive({
 });
 
 export let options = reactive([
-  {option: 'hiragana', kana: 'あいうえお', color: '#ead4dd', selected: true},
-  {option: 'katakana', kana: 'アイウエオ', color: '#000', selected: false},
-  {option: 'hiragana + katakana', kana: 'ひらがな　カタカナ', color: '#000', selected: false}
+  {option: 'hiragana', kana: 'あいうえお', plus: '', color: '#ead4dd', selected: true},
+  {option: 'katakana', kana: 'アイウエオ', plus: '', color: '#000', selected: false},
+  {option: 'hiragana　katakana', kana: 'ひらがな　カタカナ', plus: '＋', color: '#000', selected: false}
 ])
 
 export let hiragana = reactive([
